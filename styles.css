@@ -55,11 +55,11 @@
 }
 
 .section__header::after {
-    right: 140px; 
+    right: 135px; 
 }
 
 .section__header::before {
-    left: 140px; 
+    left: 135px; 
 }
 
 .section__description {
@@ -223,7 +223,7 @@ nav {
     overflow: hidden;
 }
 
-.banner__card .blog__content{
+.banner__card .blog__content {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -233,6 +233,8 @@ nav {
     background-color: rgba(22, 22, 22, 0.95);
     z-index: 1;
     transition: 0.5s;
+    opacity: 0; /* Hide content by default */
+    pointer-events: none; /* Disable pointer events to not interfere with hover/click */
 }
 
 .banner__card .blog__content p{
@@ -240,8 +242,16 @@ nav {
     line-height: 1.75rem;
 }
 
-.banner__card:hover .blog__content{
-    top: 0;
+.banner__card:hover .blog__content {
+    top: 0; /* Show content on hover */
+    opacity: 1;
+    pointer-events: auto; /* Enable pointer events when content is visible */
+}
+
+.banner__card.show-content .blog__content {
+    top: 0; /* Show content when .show-content is applied */
+    opacity: 1;
+    pointer-events: auto; /* Enable pointer events when content is visible */
 }
 
 .banner__card h4{
