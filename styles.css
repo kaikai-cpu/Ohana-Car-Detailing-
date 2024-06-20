@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
 /* Variables and values used throughout the styling */
 :root {
@@ -54,6 +55,7 @@
     z-index: -1;
 }
 
+/* Default styles for all .section__header elements */
 .section__header::after {
     right: 135px; 
 }
@@ -62,14 +64,14 @@
     left: 135px; 
 }
 
-/*'Additional Service' longer header */
-.section__header.longer__header::after{
+/* Styles specifically for .section__header with .longer__header */
+.section__header.longer__header::after {
     right: 250px;
 }
-.section__header.longer__header::before{
+
+.section__header.longer__header::before {
     left: 250px;
 }
-
 
 .section__description {
     line-height: 1.75rem;
