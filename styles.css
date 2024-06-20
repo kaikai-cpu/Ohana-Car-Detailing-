@@ -62,11 +62,31 @@
     left: 135px; 
 }
 
+/*'Additional Service' longer header */
+.section__header.longer__header::after{
+    right: 250px;
+}
+.section__header.longer__header::before{
+    left: 250px;
+}
+
+
 .section__description {
     line-height: 1.75rem;
     color: var(--text-light);
 }
 
+.services__list {
+    list-style-type: disc;
+    list-style-position: outside; 
+    padding-left: 1rem; 
+    margin: 0;
+}
+
+.services__list li {
+    margin-bottom: 0.5rem; 
+    text-align: left; 
+}
 .btn {
     padding: 1rem 1.5rem;
     outline: none;
